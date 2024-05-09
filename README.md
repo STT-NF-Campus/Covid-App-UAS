@@ -13,6 +13,6 @@ npm install
 Running application:
 
 ```bash
-npm run start
+npm run dev
 ```
 

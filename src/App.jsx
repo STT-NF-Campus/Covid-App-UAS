@@ -1,10 +1,8 @@
-import HomePage from "./pages/Home/Home";
+import HomePage from "./pages/Home/Home.jsx";
 
 function App() {
   return (
     <div>
-      <h2>Covid App</h2>
-      <h3>Final Project Frontend Engineer</h3>
       <HomePage />
     </div>
   );
