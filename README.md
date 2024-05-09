@@ -1,6 +1,6 @@
 # Midterm Exam Project Frontend Course
 
-Building Covid Web Application with React.js(Vite)
+Building Covid Web Application with React.js(Vite) and Tailwind Css
 
 ## install and run the application
 
