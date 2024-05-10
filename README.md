@@ -15,4 +15,8 @@ Running application:
 ```bash
 npm run dev
 ```
+Search in Browser
 
+```bash
+ http://localhost:2019/
+```
