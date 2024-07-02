@@ -6,11 +6,10 @@ const Table = ({ dataProvinsi }) => {
                     <tr>
                         <th className='border-[1.5px] border-gray tablet:py-[0.7rem] hp:py-[0.2rem] tablet:px-7 hp:px-[0.3rem] text-primary'>No</th>
                         {Object.keys(dataProvinsi[0]).map((item, index) => (
-                            <th key={index} className={`border-[1.5px] border-gray tablet:py-[0.7rem] hp:py-[0.4rem]  tablet:px-7 text-primary ${
-                                item === 'kota' ? 'hp:px-[4rem]' : 'hp:px-[0.7rem]'
-                            } `}>{
-                                item === 'kota' ? 'Provinsi' : item === 'kasus' ? 'Positif' : item.charAt(0).toUpperCase() + item.slice(1)
-                            }</th>
+                            <th key={index} className={`border-[1.5px] border-gray tablet:py-[0.7rem] hp:py-[0.4rem]  tablet:px-7 text-primary ${item === 'kota' ? 'hp:px-[4rem]' : 'hp:px-[0.7rem]'
+                                } `}>{
+                                    item === 'kota' ? 'Provinsi' : item === 'kasus' ? 'Positif' : item.charAt(0).toUpperCase() + item.slice(1)
+                                }</th>
                         ))}
                     </tr>
                 </thead>

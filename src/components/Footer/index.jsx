@@ -1,6 +1,7 @@
 const Footer = () => {
     return (
-        <div className="flex items-center justify-between px-20 py-[1.9rem] hp:flex-col-reverse hp:text-center hp:pb-7 hp:px-7 hp:pt-[0.8rem]">
+        <footer>
+            <div className="flex items-center justify-between px-20 py-[1.9rem] hp:flex-col-reverse hp:text-center hp:pb-7 hp:px-7 hp:pt-[0.8rem]">
             <div className="pb-[0.15rem]">
                 <h4 className="text-h2 hp:text-h3 text-white">Covid ID</h4>
                 <h4 className="text-h4 hp:text-p text-white pt-[0.1rem] hp:pt-1">Developed by z.dacoder</h4>
@@ -13,8 +14,9 @@ const Footer = () => {
                     <li className="">About</li>
                 </ul>
             </div>
-        </div>
-    )
+            </div>
+        </footer>
+    )   
 }
 
-export default Footer
+export default Footer;

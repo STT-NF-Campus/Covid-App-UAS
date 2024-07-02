@@ -1,4 +1,4 @@
-import Form from '../Form/Form';
+import { Form } from '../ui';
 
 const FormCovid = ({ dataProvinsi, setDataProvinsi }) => {
   return (
@@ -18,4 +18,4 @@ const FormCovid = ({ dataProvinsi, setDataProvinsi }) => {
   )
 }
 
-export default FormCovid
+export default FormCovid;

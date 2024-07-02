@@ -1,5 +1,5 @@
 import data from '../../constants/indonesia';
-import Card from '../Card/Card';
+import { Card } from '../ui';
 const DataCovid = () => {
   const dataCovid = data.indonesia;
   return (
@@ -15,4 +15,4 @@ const DataCovid = () => {
   )
 }
 
-export default DataCovid
+export default DataCovid;

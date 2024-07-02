@@ -1,12 +1,13 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     return (
-        <div className="tablet:flex tablet:justify-between tablet:items-center dekstop:px-20 dekstop:py-6 tablet:px-24 tablet:py-4 bg-primary">
+        <nav>
+            <div className="tablet:flex tablet:justify-between tablet:items-center dekstop:px-20 dekstop:py-6 tablet:px-24 tablet:py-4 bg-primary">
             <div className="text-white hp:py-4 hp:px-7 hp:flex hp:items-center hp:justify-between hp:shadow-lg">
                 <div className="cursor-pointer">
                     <a href="#navbar">
@@ -16,7 +17,7 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div onClick={handleClick} className="dekstop:hidden tablet:hidden hp:transition-shadow hp:cursor-pointer">
-                    <FontAwesomeIcon className='fa-2x' icon={click ? faXmark : faBars} />
+                    {/* <FontAwesomeIcon className='fa-2x' icon={click ? faXmark : faBars} /> */}
                 </div>
             </div>
             <div className={`hp:pb-6 hp:absolute dekstop:text-h4 hp:bg-dark-green hp:z-[-1] hp:w-full hp:transition-all hp:duration-500 hp:ease-in ${click ? 'hp:top-[4.9rem]' : 'hp:top-[-280px]'}`}>
@@ -35,7 +36,8 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+            </div>
+        </nav>
     )
 }
 
