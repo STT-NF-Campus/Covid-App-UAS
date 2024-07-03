@@ -1,6 +1,6 @@
 import { Table } from '../ui';
 
-const ProvinsiTable = ({ dataProvinsi }) => {
+const ProvinsiTable = () => {
     return (
         <div className="flex flex-col items-center pt-[6.7rem] pb-32 hp:mt-[96rem]">
             <div>
@@ -12,7 +12,7 @@ const ProvinsiTable = ({ dataProvinsi }) => {
                 </div>
             </div>
             <div className='tablet:mt-14 overflow-x-auto hp:w-[78.8%] hp:mt-8 dekstop:hover:shadow-xl dekstop:hover:shadow-primary dekstop:transition-all dekstop:duration-300'>
-                <Table dataProvinsi={dataProvinsi} />
+                <Table/>
             </div>
         </div>
     )

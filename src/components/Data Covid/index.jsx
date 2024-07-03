@@ -1,7 +1,7 @@
-import data from '../../constants/indonesia';
-import { Card } from '../ui';
+// import data from '../../constants/indonesia';
+// import { Card } from '../ui';
 const DataCovid = () => {
-  const dataCovid = data.indonesia;
+  // const dataCovid = data.indonesia;
   return (
     <div className="text-center tablet:pt-24 tablet:pb-[7.8rem] hp:absolute hp:w-full hp:mt-[610px] hp:bg-[#F8F9FA] ">
       <div className="mb-12 hp:relative hp:top-5 hp:mt-7">
@@ -9,7 +9,7 @@ const DataCovid = () => {
         <h4 className='tablet:text-h4 text-secondary hp:text-[18px] mt-[-0.3rem]'>Data Covid Berdasarkan Indonesia</h4>
       </div>
       <div className="flex tablet:items-center tablet:justify-center tablet:gap-5 hp:flex-col tablet:flex-col dekstop:flex-row hp:pt-5">
-        {dataCovid.map((item, index) => <Card key={index} data={item} />)}
+        {/* {dataCovid.map((item, index) => <Card key={index} data={item} />)} */}
       </div>
     </div>
   )

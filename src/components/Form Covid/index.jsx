@@ -1,6 +1,6 @@
 import { Form } from '../ui';
 
-const FormCovid = ({ dataProvinsi, setDataProvinsi }) => {
+const FormCovid = () => {
   return (
     <div className="flex tablet:items-center tablet:pt-28 tablet:pb-32 tablet:px-20 hp:flex-col hp:pt-20 hp:pb-24 ">
       <div className="tablet:flex-1">
@@ -11,7 +11,7 @@ const FormCovid = ({ dataProvinsi, setDataProvinsi }) => {
           <h1 className="tablet:text-display text-center text-primary hp:text-[2.7rem] dekstop:hover:-translate-y-5 dekstop:transition-all cursor-pointer">Form Covid</h1>
         </div>
         <div className='w-8/12 mx-auto'>
-          <Form dataProvinsi={dataProvinsi} setDataProvinsi={setDataProvinsi} />
+          <Form/>
         </div>
       </div>
     </div>
