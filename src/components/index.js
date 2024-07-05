@@ -6,7 +6,6 @@ export { default as FormCovid } from "./Form Covid";
 export { default as Navbar } from "./Navbar";
 export { default as Hero } from "./Hero";
 export { default as ProvinsiTable } from "./Provinsi Table";
-export { default as Container } from "./Container";
 export { default as SituationTable } from "./Situation Table";
 export { default as SituationRegion } from "./Situation By Regions";
 export { default as IndonesiaSituation } from "./Indonesia Situation";

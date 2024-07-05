@@ -1,11 +1,11 @@
-import { Container, Footer, Navbar } from "../components";
+import { Footer, Navbar } from "../components";
 
 const Layout = ({ children }) => {
     return (
         <>
             <Navbar />
             <main>
-                <Container>{children}</Container>
+                {children}
             </main>
             <Footer />
         </>

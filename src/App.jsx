@@ -8,7 +8,6 @@ import theme from "./constants/theme.js";
 import { ThemeProvider } from "styled-components";
 import { Route, Routes } from "react-router-dom";
 
-
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -21,7 +20,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 

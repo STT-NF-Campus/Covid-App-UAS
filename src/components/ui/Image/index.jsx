@@ -1,8 +1,8 @@
-const Image = () => {
+import StyledImage from "./Image.styled";
+
+const Image = ({src, alt}) => {
     return (
-        <div>
-            
-        </div>
+        <StyledImage src={src} alt={alt} />
     )
 }
 

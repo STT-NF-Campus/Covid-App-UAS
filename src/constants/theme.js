@@ -15,6 +15,14 @@ const theme = {
         danger: '#EF476F',
         black: '#073B4C',
         gray: '#64748B',
+        white: '#FFFFFF',
+    },
+
+    button: {
+        sm: '0.5rem 2.3rem',
+        md: '0.7rem 3.8rem',
+        lg: '0.9rem 5.3rem',
+        xl: '1.1rem 6.8rem',
     }
 
 }
