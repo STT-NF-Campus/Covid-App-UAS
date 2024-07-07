@@ -22,4 +22,4 @@ Search in Browser
 ```
 
 ## Live Demo Website :
-[CovidID](https://movie-app-zdacoder.vercel.app/)
+[Covid ID](https://movie-app-zdacoder.vercel.app/)
