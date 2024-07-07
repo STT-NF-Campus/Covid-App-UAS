@@ -13,7 +13,9 @@ const Home = () => {
     setData(response.data);
   }
 
-  useEffect(() => fetchGlobalCovid);
+  useEffect(() => {
+    fetchGlobalCovid();
+  }, []);
 
   const contextValue = {
     data,

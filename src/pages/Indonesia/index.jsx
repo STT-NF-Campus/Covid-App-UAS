@@ -13,7 +13,9 @@ const Indonesia = () => {
         setData(response.data);
     }
 
-    useEffect(() => fetchIndonesiaCovid);
+    useEffect(() => {
+        fetchIndonesiaCovid()
+    }, []);
 
     const contextValue = {
         data,

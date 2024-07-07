@@ -1,5 +1,5 @@
 import Home from "./pages/Home.jsx";
-import Indonesia from "./pages/Indonesian/index.jsx";
+import Indonesia from "./pages/Indonesia/index.jsx";
 import Provinsi from "./pages/Provinsi/index.jsx";
 import About from "./pages/About/index.jsx";
 import { GlobalStyle } from "./components";
