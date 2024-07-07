@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Table } from "../ui";
 import { StyledSituationProvinces, CardGroup, TitleGroup, Title, SubTitle } from "./SituationProvinces.styled";
-import IndonesianContext from "../../context/IndonesiaContext";
+import IndonesiaContext from "../../context/IndonesiaContext";
 
 const SituationProvinces = () => {
-    const { data } = useContext(IndonesianContext);
+    const { data } = useContext(IndonesiaContext);
     return (
         <StyledSituationProvinces>
             <TitleGroup>

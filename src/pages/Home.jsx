@@ -9,8 +9,8 @@ const Home = () => {
   const [data, setData] = useState(provinces);
 
   const fetchGlobalCovid = async () => {
-    const response = await axios(URL.GLOBAL)
-    setData(response.data)
+    const response = await axios(URL.GLOBAL);
+    setData(response.data);
   }
 
   useEffect(() => fetchGlobalCovid);
