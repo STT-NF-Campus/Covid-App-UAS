@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Hero, IndonesiaSituation, SituationTable } from "../../components";
+import { Hero, IndonesiaSituation, SituationProvinces } from "../../components";
 import { useEffect, useState } from "react";
 import provinces from "../../constants/provinces";
 import URL from "../../constants/endpoints";
@@ -24,7 +24,7 @@ const Indonesia = () => {
         <IndonesianContext.Provider value={contextValue}>
             <Hero />
             <IndonesiaSituation />
-            <SituationTable />
+            <SituationProvinces />
         </IndonesianContext.Provider>
     )
 }

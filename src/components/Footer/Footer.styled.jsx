@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Heading } from "../ui";
 
 const StyledFooter = styled.footer`
     background-color: ${({ theme }) => theme.colors.primary};
@@ -36,4 +37,17 @@ const FooterRight = styled.div`
     }
 `;
 
-export {StyledFooter, Container, FooterLeft, FooterRight};
+const Title = styled(Heading)`
+    font-size: ${({ theme }) => theme.fontsize.h3};
+    @media (min-width: 768px) {
+        font-size: ${({ theme }) => theme.fontsize.h2};
+    }
+`;
+
+const SubTitle = styled(Heading)`
+    font-size: ${({ theme }) => theme.fontsize.h5};
+    @media (min-width: 768px) {
+        font-size: ${({ theme }) => theme.fontsize.h4};
+    }
+`;
+export {StyledFooter, Container, FooterLeft, FooterRight, Title, SubTitle};

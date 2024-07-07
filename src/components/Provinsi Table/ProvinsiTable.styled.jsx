@@ -1,37 +1,37 @@
 import styled from "styled-components";
 import { Heading } from "../ui";
 
-const StyledGlobalSituation = styled.div`
-    background-color: #F8F9FA;
+const StyledProvinsiTable = styled.div`
     width: 100%;
     padding: 4rem 3rem;
+    margin-bottom: 2rem;
     @media (min-width: 768px) {
         padding: 4rem 4rem;
+        margin-bottom: 0;
     }
     @media (min-width: 992px) {
-        padding: 7rem 6rem;
+        padding: 5rem 14rem;
     }
 `;
 
 const CardGroup = styled.div`
     display: flex;
     justify-content: space-between;
-    gap: 1.2rem;
     margin-top: 3rem;
-    flex-direction: column;
+    overflow-x: auto;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        box-shadow: 0 6px 9px ${({ theme }) => theme.colors.primary};
+    }
     @media (min-width: 768px) {
-        gap: 2rem;
-        justify-content: center;
-        flex-direction: row;
+        gap: 1rem;
+        margin-top: 3rem;
+        overflow-x: none;
     }
 `;
 
 const TitleGroup = styled.div`
     text-align:center;
-    margin-bottom: 2rem;
-    @media (min-width: 768px) {
-        margin-bottom: 0;
-    }
 `;
 
 const Title = styled(Heading)`
@@ -48,4 +48,5 @@ const SubTitle = styled(Heading)`
     }
 `;
 
-export {StyledGlobalSituation, CardGroup, TitleGroup, Title, SubTitle};  
+
+export { StyledProvinsiTable, CardGroup, TitleGroup, Title, SubTitle};

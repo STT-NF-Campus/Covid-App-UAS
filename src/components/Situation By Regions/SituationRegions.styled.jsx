@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Heading } from "../ui";
 
 const StyledSituationRegions = styled.div`
     width: 100%;
-    padding: 3rem 2rem;
+    padding: 4rem 3rem;
     @media (min-width: 768px) {
         padding: 4rem 4rem;
     }
@@ -16,8 +17,14 @@ const CardGroup = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        margin-top: 3rem;
+        gap: 2rem;
+        flex-direction: row;
+    }
 `;
 
 const TitleGroup = styled.div`
@@ -41,4 +48,18 @@ const ValueCard = styled.div`
     align-items: center;
 `;
 
-export { StyledSituationRegions, CardGroup, TitleGroup, StyledIcon, TitleCard, ValueCard};  
+const Title = styled(Heading)`
+    font-size: ${({ theme }) => theme.fontsize.h1};
+    @media (min-width: 768px) {
+        font-size: ${({ theme }) => theme.fontsize.display};
+    }
+`;
+
+const SubTitle = styled(Heading)`
+    font-size: ${({ theme }) => theme.fontsize.h5};
+    @media (min-width: 768px) {
+        font-size: ${({ theme }) => theme.fontsize.h4};
+    }
+`;
+
+export { StyledSituationRegions, CardGroup, TitleGroup, StyledIcon, TitleCard, ValueCard, Title, SubTitle};  

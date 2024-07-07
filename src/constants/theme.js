@@ -6,6 +6,7 @@ const theme = {
         h2: '2.441rem',
         h3: '1.953rem',
         h4: '1.563rem',
+        h5: '1.45rem',
         paragraph: '1rem',
     },
 

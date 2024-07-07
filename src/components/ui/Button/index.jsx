@@ -18,6 +18,11 @@ const Button = styled.button`
         width: 100%;
         display: block;
     `};
+
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color:#00c38f;
+    }
 `;
 
 export default Button;

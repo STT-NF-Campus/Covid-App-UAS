@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Heading } from '../ui';
 
 const StyledNavbar = styled.nav`
     background-color: ${({ theme }) => theme.colors.primary};
@@ -6,15 +7,22 @@ const StyledNavbar = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: sticky;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
 
     @media (min-width: 768px) {
+        position:static;
         padding: 0.5rem 4rem;
     }
 
     @media (min-width: 992px) {
+        position:static;
         padding: 1.2rem 6rem;
     }
-
 `;
 
 const Container = styled.div`
@@ -22,7 +30,6 @@ const Container = styled.div`
     padding: 1rem 0;
     align-items: start;
     flex-direction: column;
-
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -69,5 +76,13 @@ const Toggle = styled.div`
     `}
 `;
 
+const NavbarTitle = styled(Heading)`
+    cursor: pointer;
+    font-size: ${({ theme }) => theme.fontsize.h2};
+    @media (min-width: 768px) {
+        font-size: ${({ theme }) => theme.fontsize.h1};
+    }
+`;
 
-export { StyledNavbar, Container, NavbarLeft, NavbarRight, Toggle };
+
+export { StyledNavbar, Container, NavbarLeft, NavbarRight, Toggle, NavbarTitle };

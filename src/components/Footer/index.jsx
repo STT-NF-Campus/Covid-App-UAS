@@ -1,13 +1,13 @@
-import { Heading, List } from "../ui";
-import { Container, FooterLeft, FooterRight, StyledFooter } from "./Footer.styled";
+import { List } from "../ui";
+import { Container, FooterLeft, FooterRight, StyledFooter, SubTitle, Title } from "./Footer.styled";
 
 const Footer = () => {
     return (
         <StyledFooter>
             <Container>
                 <FooterLeft>
-                    <Heading type="h2" color="white">Covid ID</Heading>
-                    <Heading type="h4" color="white">Developed by z.dacoder</Heading>
+                    <Title type="h2" color="white">Covid ID</Title>
+                    <SubTitle type="h4" color="white">Developed by z.dacoder</SubTitle>
                 </FooterLeft>
                 <FooterRight>
                     <List />

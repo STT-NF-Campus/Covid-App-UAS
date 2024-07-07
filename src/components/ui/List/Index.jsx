@@ -10,6 +10,14 @@ const Ul = styled.ul`
         padding-left: 2.5rem;
         font-size: 1.563rem;
         list-style-type: none;
+        font-size: ${({ theme }) => theme.fontsize.h5};
+        transition: all 0.3s ease-in-out;
+        @media (min-width: 768px) {
+            font-size: ${({ theme }) => theme.fontsize.h4};
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 
     ${({ click }) => click && css`
@@ -27,7 +35,7 @@ const Ul = styled.ul`
     }
 `;
 
-const List = ({click}) => {
+const List = ({ click }) => {
     return (
         <Ul click={click}>
             <li className="list">

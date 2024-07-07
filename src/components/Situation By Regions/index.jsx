@@ -1,16 +1,16 @@
 import { useContext } from "react";
-import GlobalContext from "../../context/GlobalContext";
 import { Card, Heading } from "../ui";
-import { CardGroup, StyledIcon, StyledSituationRegions, TitleCard, TitleGroup, ValueCard } from "./SituationRegions.styled";
+import { CardGroup, StyledIcon, StyledSituationRegions, SubTitle, Title, TitleCard, TitleGroup, ValueCard } from "./SituationRegions.styled";
 import { FaHeadSideMask, FaFaceLaughBeam, FaSkull } from "react-icons/fa6";
+import GlobalContext from "../../context/GlobalContext";
 
 const SituationRegions = () => {
     const { data } = useContext(GlobalContext);
     return (
         <StyledSituationRegions>
             <TitleGroup>
-                <Heading type="display" color="primary">Situation by Regions</Heading>
-                <Heading type="h4" color="secondary">Bacaan Pilihan Covid</Heading>
+                <Title type="display" color="primary">Situation by Regions</Title>
+                <SubTitle type="h4" color="secondary">Bacaan Pilihan Covid</SubTitle>
             </TitleGroup>
             <CardGroup>
                 {data.regions?.map((value, key) => {
@@ -35,7 +35,6 @@ const SituationRegions = () => {
                                     <FaHeadSideMask />
                                 </StyledIcon>
                             </ValueCard>
-                            
                             <ValueCard>
                                 <TitleCard>
                                     <Heading type="paragraph" color="gray">Recovered</Heading>
@@ -45,7 +44,6 @@ const SituationRegions = () => {
                                     <FaFaceLaughBeam />
                                 </StyledIcon>
                             </ValueCard>
-
                             <ValueCard>
                                 <TitleCard>
                                     <Heading type="paragraph" color="gray">Death</Heading>
@@ -58,9 +56,6 @@ const SituationRegions = () => {
                         </Card>
                     );
                 })}
-                {/* {data.regions?.map((item) => (
-                    <Card key="Situation Regions" value={item} />
-                ))} */}
             </CardGroup>
         </StyledSituationRegions>
     )

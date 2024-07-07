@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import { Heading, List } from '../ui';
+import { List } from '../ui';
 import { FaBars } from "react-icons/fa6";
 import { RiCloseLargeLine } from "react-icons/ri";
-
-import { StyledNavbar, Container, NavbarLeft, NavbarRight, Toggle } from './Navbar.styled.jsx';
-
-
+import { StyledNavbar, Container, NavbarLeft, NavbarRight, Toggle, NavbarTitle } from './Navbar.styled.jsx';
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
@@ -14,9 +11,9 @@ const Navbar = () => {
         <StyledNavbar>
             <Container>
                 <NavbarLeft>
-                    <Heading type="h1" color="white">
+                    <NavbarTitle type="h1" color="white">
                         Covid ID
-                    </Heading>
+                    </NavbarTitle>
                 </NavbarLeft>
                 <NavbarRight click={click} >
                     <List click={click} />
@@ -29,4 +26,5 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+
+export default Navbar;

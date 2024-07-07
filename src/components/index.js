@@ -1,4 +1,3 @@
-export { default as DataCovid } from "./Data Covid";
 export { default as Footer } from "./Footer";
 export { default as GlobalSituation } from "./Global Situation";
 export { default as GlobalStyle } from "./GlobalStyle";
@@ -6,7 +5,7 @@ export { default as FormCovid } from "./Form Covid";
 export { default as Navbar } from "./Navbar";
 export { default as Hero } from "./Hero";
 export { default as ProvinsiTable } from "./Provinsi Table";
-export { default as SituationTable } from "./Situation Table";
+export { default as SituationProvinces } from "./Situation By Provinces";
 export { default as SituationRegion } from "./Situation By Regions";
 export { default as IndonesiaSituation } from "./Indonesia Situation";
 export { default as SectionAbout } from "./SectionAbout";

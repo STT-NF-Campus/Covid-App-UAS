@@ -1,55 +1,114 @@
-// import { useState } from 'react';
+import { useContext, useState } from "react";
+import ProvinsiContext from "../../../context/ProvinsiContext";
+import { FieldGroup, InputGroup, StyledForm } from "./Form.styled";
+import { Button, Dropdown, Error, Input, Label, Option } from "../../ui";
 
 const Form = () => {
-    // const [provinsi, setProvinsi] = useState('Jakarta');
-    // const [status, setStatus] = useState('kasus');
-    // const [jumlah, setJumlah] = useState(0);
+    const { data, setData } = useContext(ProvinsiContext);
+
+    const [formData, setFormData] = useState({
+        provinsi: "Aceh",
+        status: "confirmed",
+        jumlah: "",
+    });
+
+    const { provinsi, status, jumlah } = formData;
+
+    const [errors, setErrors] = useState({
+        jumlah: null,
+    });
+
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const validate = () => {
+        if (jumlah === '') {
+            setErrors({
+                jumlah: 'Jumlah Wajib Di isi',
+            });
+            return false;
+        } else if (jumlah < 1) {
+            setErrors({
+                jumlah: 'Jumlah tidak boleh kurang dari 1',
+            });
+            return false;
+        }
+        else {
+            setErrors({
+                jumlah: null,
+            });
+            return true;
+        }
+    };
+
+    const resetForm = () => {
+        setFormData({
+            provinsi: "Aceh",
+            status: "confirmed",
+            jumlah: "",
+        });
+    };
+
+    const addMovie = () => {
+        const newDataCovid = data.regions?.map((item) => {
+            const { name, numbers } = item;
+            if (name == provinsi) {
+                numbers[status] = parseInt(numbers[status]) + parseInt(jumlah);
+            }
+            return item;
+        });
+
+        const formattedData = {
+            ...data,
+            regions: newDataCovid,
+        }
+
+        setData(formattedData);
+        return true;
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const newDataProvinsi = dataProvinsi.map((item) => {
-        //     if (item.kota === provinsi) {
-        //         item[status] = parseInt(item[status]) + parseInt(jumlah);
-        //     }
-        //     return item;
-        // });
-        // setDataProvinsi(newDataProvinsi);
-    }
+        validate() && addMovie() && resetForm();
+    };
+
+
     return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <div className="my-4">
-                    <label htmlFor="provinsi" className="text-[24px] text-gray">Provinsi</label>
-                    <div className="">
-                        <select name="provinsi" id="provinsi" className='rounded-md border-2 border-primary w-full py-2 px-2 appearance-none hover:border-primary'>
-                            {/* {dataProvinsi.map((item, index) => (
-                                <option key={index} value={item.kota}>{item.kota}</option>
-                            ))} */}
-                        </select>
-                    </div>
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="status" className="text-[24px] text-gray">Status</label>
-                    <div className="">
-                        <select name="status" id="status" className='rounded-md border-2 border-primary w-full py-2 px-2 appearance-none hover:border-primary'>
-                            <option value="kasus">Positif</option>
-                            <option value="sembuh">Sembuh</option>
-                            <option value="meninggal">Meninggal</option>
-                            <option value="dirawat">Dirawat</option>
-                        </select>
-                    </div>
-                </div>
-                <div className="mb-7">
-                    <label htmlFor="jumlah" className="text-[24px] text-gray">Jumlah</label>
-                    <div className="">
-                        <input type="number" name="jumlah" id="jumlah" className="rounded-md border-2 border-primary w-full py-2 px-2 hover:border-primary" placeholder='0' required min={1} />
-                    </div>
-                </div>
-                <div className="">
-                    <button type="submit" className="bg-primary py-2 text-[24px] text-white rounded-md w-full hover:bg-dark-green">Submit</button>
-                </div>
-            </form>
-        </>
+        <StyledForm onSubmit={handleSubmit}>
+            <FieldGroup>
+                <Label htmlFor="provinsi">Provinsi</Label>
+                <InputGroup>
+                    <Dropdown name="provinsi" value={provinsi} onChange={handleInput}>
+                        {data.regions?.map((item, index) =>
+                            <option key={index} value={item.name}>{item.name}</option>
+                        )}
+                    </Dropdown>
+                </InputGroup>
+            </FieldGroup>
+            <FieldGroup>
+                <Label htmlFor="status">Status</Label>
+                <InputGroup>
+                    <Dropdown name="status" value={status} onChange={handleInput}>
+                        <Option value="confirmed">Positif</Option>
+                        <Option value="recovered">Sembuh</Option>
+                        <Option value="treatment">Dirawat</Option>
+                        <Option value="death">Meninggal</Option>
+                    </Dropdown>
+                </InputGroup>
+            </FieldGroup>
+            <FieldGroup>
+                <Label htmlFor="jumlah">Jumlah</Label>
+                <InputGroup>
+                    <Input type="number" pattern="^\d+$" name="jumlah" value={jumlah} placeholder='0' onChange={handleInput} min={1} />
+                    {errors.jumlah && <Error>{errors.jumlah}</Error>}
+                </InputGroup>
+            </FieldGroup>
+            <FieldGroup>
+                <Button type="submit" color="primary" size="sm" full>Submit</Button>
+            </FieldGroup>
+        </StyledForm>
     )
 }
 

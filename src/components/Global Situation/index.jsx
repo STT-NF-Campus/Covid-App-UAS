@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import GlobalContext from "../../context/GlobalContext";
 import { Card, Heading } from "../ui";
-import { StyledGlobalSituation, CardGroup, TitleGroup } from "./GlobalSituation.styled";
+import { StyledGlobalSituation, CardGroup, TitleGroup, Title, SubTitle } from "./GlobalSituation.styled";
 
 const GlobalSituation = () => {
     const { data } = useContext(GlobalContext);
     return (
         <StyledGlobalSituation>
             <TitleGroup>
-                <Heading type="display" color="primary">Global Situation</Heading>
-                <Heading type="h4" color="secondary">Data Covid Berdasarkan Global</Heading>
+                <Title type="display" color="primary">Global Situation</Title>
+                <SubTitle type="h4" color="secondary">Data Covid Berdasarkan Global</SubTitle>
             </TitleGroup>
             <CardGroup>
                 {data.global?.map((value, key=1) =>

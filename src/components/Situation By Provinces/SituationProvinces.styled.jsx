@@ -1,37 +1,32 @@
 import styled from "styled-components";
 import { Heading } from "../ui";
 
-const StyledGlobalSituation = styled.div`
-    background-color: #F8F9FA;
+const StyledSituationProvinces = styled.div`
     width: 100%;
     padding: 4rem 3rem;
+    margin-bottom: 1rem;
     @media (min-width: 768px) {
         padding: 4rem 4rem;
     }
     @media (min-width: 992px) {
-        padding: 7rem 6rem;
+        padding: 6rem 13rem;
     }
 `;
 
 const CardGroup = styled.div`
     display: flex;
     justify-content: space-between;
-    gap: 1.2rem;
     margin-top: 3rem;
-    flex-direction: column;
+    overflow-x: auto;
     @media (min-width: 768px) {
-        gap: 2rem;
-        justify-content: center;
-        flex-direction: row;
+        gap: 1rem;
+        margin-top: 3rem;
+        overflow-x: none;
     }
 `;
 
 const TitleGroup = styled.div`
     text-align:center;
-    margin-bottom: 2rem;
-    @media (min-width: 768px) {
-        margin-bottom: 0;
-    }
 `;
 
 const Title = styled(Heading)`
@@ -48,4 +43,5 @@ const SubTitle = styled(Heading)`
     }
 `;
 
-export {StyledGlobalSituation, CardGroup, TitleGroup, Title, SubTitle};  
+
+export { StyledSituationProvinces, CardGroup, TitleGroup, Title, SubTitle};
