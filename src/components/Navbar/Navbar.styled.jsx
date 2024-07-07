@@ -50,7 +50,7 @@ const NavbarLeft = styled.div`
 
 const NavbarRight = styled.div`
     display: none;
-    ${({ click }) => click && css`
+    ${({ click }) => click == "true" && css`
         display: flex;
     `};
 
@@ -70,7 +70,7 @@ const Toggle = styled.div`
         margin-top: 0;
     }
 
-    ${({ click }) => click && css`
+    ${({ click }) => click == "true" && css`
         margin-top: 2.2rem;
         margin-bottom: auto;
     `}

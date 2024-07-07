@@ -14,7 +14,7 @@ const Button = styled.button`
                     size === 'xl' ? theme.fontsize.h1 : theme.fontsize.paragraph
         };
     `};
-    ${({ full }) => full && css`
+    ${({ full }) => full == "true" && css`
         width: 100%;
         display: block;
     `};

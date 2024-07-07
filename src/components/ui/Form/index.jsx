@@ -106,7 +106,7 @@ const Form = () => {
                 </InputGroup>
             </FieldGroup>
             <FieldGroup>
-                <Button type="submit" color="primary" size="sm" full>Submit</Button>
+                <Button type="submit" color="primary" size="sm" $full="true">Submit</Button>
             </FieldGroup>
         </StyledForm>
     )

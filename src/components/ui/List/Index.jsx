@@ -20,7 +20,7 @@ const Ul = styled.ul`
         }
     }
 
-    ${({ click }) => click && css`
+    ${({ click }) => click == "true" && css`
         .list{
             margin: 0.5rem 0;
             padding-left: 0;

@@ -15,11 +15,11 @@ const Navbar = () => {
                         Covid ID
                     </NavbarTitle>
                 </NavbarLeft>
-                <NavbarRight click={click} >
-                    <List click={click} />
+                <NavbarRight $click={click.toString()} >
+                    <List $click={click.toString()} />
                 </NavbarRight>
             </Container>
-            <Toggle onClick={handleClick} click={click}>
+            <Toggle onClick={handleClick} $click={click.toString()}>
                 {click ? <RiCloseLargeLine /> : <FaBars />}
             </Toggle>
         </StyledNavbar>

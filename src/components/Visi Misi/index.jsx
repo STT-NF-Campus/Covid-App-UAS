@@ -14,12 +14,12 @@ const VisiMisi = () => {
                     </TextContainer>
                 </LeftSide>
                 <RightSide>
-                    <Image src="/public/undraw_world_re.svg" alt="Re-World" />
+                    <Image src="/undraw_world_re.svg" alt="Re-World" />
                 </RightSide>
             </VisiContainer>
             <MisiContainer>
                 <LeftSide>
-                    <Image src="/public/undraw_stepping_up.svg" alt="Stepping Up" />
+                    <Image src="/undraw_stepping_up.svg" alt="Stepping Up" />
                 </LeftSide>
                 <RightSide>
                     <TitleContainer>
